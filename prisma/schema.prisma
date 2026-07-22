@@ -1,0 +1,177 @@
+// Prisma schema for Old Colony Chauffeur.
+// Datasource: Neon Postgres. DATABASE_URL is the pooled connection (used at
+// runtime); DIRECT_URL is the direct connection (used for migrations).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ---------------------------------------------------------------------------
+// Enums
+// ---------------------------------------------------------------------------
+
+enum Role {
+  ADMIN
+  CLIENT
+}
+
+// Lowercase values intentionally mirror the existing TS string enums in
+// types/index.ts so the API contract stays unchanged across the DB boundary.
+enum ServiceType {
+  airport
+  city
+  hourly
+  event
+}
+
+enum VehicleType {
+  regular
+  vip
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
+
+// ---------------------------------------------------------------------------
+// Auth.js (NextAuth) models — User, Account, Session, VerificationToken.
+// Shapes follow the official Prisma adapter contract; do not rename fields.
+// ---------------------------------------------------------------------------
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  role          Role      @default(CLIENT)
+  // Client-editable profile fields (optional; identity name/email come from Google).
+  phone          String?
+  // Legacy single address — superseded by SavedAddress[]. Kept so the backfill
+  // migration loses no data; no longer written to.
+  defaultAddress String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts       Account[]
+  sessions       Session[]
+  bookings       Booking[]
+  savedAddresses SavedAddress[]
+}
+
+// A client's reusable pickup/drop-off addresses. Exactly one per user is the
+// default (surfaced first in the booking form).
+model SavedAddress {
+  id        String   @id @default(cuid())
+  userId    String
+  label     String? // optional friendly name, e.g. "Home", "Office"
+  address   String
+  isDefault Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ---------------------------------------------------------------------------
+// Domain models
+// ---------------------------------------------------------------------------
+
+model Booking {
+  id        String @id @default(cuid())
+  reference String @unique // human-friendly, e.g. OC-2026-0042
+
+  // Ride details (mirrors BookingFormData)
+  serviceType    ServiceType
+  vehicleType    VehicleType
+  vehicleId      String?
+  pickup         String
+  dropoff        String
+  passengers     Int
+  luggageCount   Int?
+  flightNumber   String?
+  returnTrip     Boolean       @default(false)
+  returnDatetime DateTime?
+  scheduledAt    DateTime // pickup date + time, stored as US Eastern instant
+  notes          String?       @db.Text
+
+  // Contact info as entered on the form (kept even for logged-in users,
+  // since guests can book without an account).
+  name  String
+  phone String
+  email String?
+
+  // Pricing
+  distanceMiles Float?
+  estimateLow   Float?
+  estimateHigh  Float?
+  finalPrice    Decimal? @db.Decimal(10, 2) // set manually by admin
+
+  status BookingStatus @default(PENDING)
+
+  // Optional owner; null for guest bookings.
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([status])
+  @@index([userId])
+  @@index([email])
+}
+
+model BlogPost {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  title         String
+  excerpt       String
+  content       String   @db.Text
+  coverImageUrl String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}

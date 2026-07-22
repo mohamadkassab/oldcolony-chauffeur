@@ -1,0 +1,184 @@
+{
+  "nav": {
+    "services": "Services",
+    "fleet": "Flotte",
+    "blog": "Blog",
+    "reviews": "Avis",
+    "faq": "FAQ",
+    "bookRide": "Réserver",
+    "phone": "(781) 234-5451"
+  },
+  "hero": {
+    "badge": "Prix fixe vers Logan · Jamais de majoration",
+    "headline1": "Voiture privée",
+    "headline2": "vers l'aéroport Logan.",
+    "sub": "Votre chauffeur de confiance au sud de Boston. Prix fixes tout compris vers Logan en véhicules de luxe Cadillac, Mercedes et Chevrolet — ponctuel, discret, 24h/24 sur réservation. English & Français.",
+    "cta": "Réserver",
+    "callUs": "Nous appeler",
+    "trust1": "Disponible 24h/24",
+    "trust2": "Jamais de tarifs dynamiques",
+    "trust3": "Suivi de vol inclus"
+  },
+  "booking": {
+    "title": "Réserver un trajet",
+    "serviceType": "Type de service",
+    "vehicleType": "Véhicule",
+    "pickup": "Adresse de départ",
+    "dropoff": "Adresse d'arrivée",
+    "passengers": "Passagers",
+    "datetime": "Date & Heure",
+    "name": "Nom complet",
+    "phone": "Numéro de téléphone",
+    "emailShort": "Email",
+    "notes": "Informations complémentaires",
+    "submit": "Demander un trajet",
+    "submitting": "Envoi en cours...",
+    "success": "Demande reçue ! Nous confirmons dans les 30 minutes.",
+    "error": "Une erreur s'est produite. Veuillez nous appeler directement.",
+    "pickupPlaceholder": "Entrez l'adresse de départ",
+    "dropoffPlaceholder": "Entrez la destination",
+    "phonePlaceholder": "+1 (___) ___-____",
+    "step1Title": "Détails du trajet",
+    "step2Title": "Choisir un véhicule",
+    "step3Title": "Vos informations",
+    "date": "Date",
+    "time": "Heure",
+    "luggageCount": "Bagages",
+    "flightNumber": "Numéro de vol",
+    "flightNumberPlaceholder": "ex. AA 1234",
+    "returnTrip": "Trajet retour",
+    "returnDatetime": "Date & heure de retour",
+    "next": "Continuer",
+    "back": "Retour",
+    "noVehicles": "Aucun véhicule disponible pour votre groupe",
+    "services": {
+      "airport": "Transfert aéroport",
+      "city": "Point à Point",
+      "hourly": "Chauffeur à l'heure",
+      "event": "Événement spécial"
+    },
+    "vehicles": {
+      "regular": "Standard",
+      "vip": "VIP"
+    }
+  },
+  "services": {
+    "badge": "Chauffeur privé · Au sud de Boston",
+    "learnMore": "En savoir plus",
+    "title": "Un chauffeur pour chaque occasion",
+    "sub": "Transferts à prix fixe vers l'aéroport Logan, chauffeur à l'heure, déplacements d'affaires et mariages — au service des villes au sud et à l'ouest de Boston. Jamais de majoration.",
+    "airport": {
+      "title": "Voiture vers l'aéroport Logan",
+      "desc": "Transferts à prix fixe vers Boston Logan (BOS) à partir de 79 $ — péages inclus, suivi de vol gratuit, jusqu'à 60 minutes d'attente gratuite à l'arrivée et prise en charge à chaque terminal. Manchester (MHT) et T.F. Green (PVD) sur devis."
+    },
+    "city": {
+      "title": "Trajets point à point",
+      "desc": "Service professionnel de point à point à travers le South Shore et vers Boston — dîner en ville, rendez-vous, correspondances — toujours un prix fixe convenu avant l'arrivée de la voiture."
+    },
+    "hourly": {
+      "title": "Chauffeur à l'heure",
+      "desc": "Votre voiture et votre chauffeur à l'heure — courses, réunions, une soirée au Symphony ou une journée complète de rendez-vous à votre rythme."
+    },
+    "event": {
+      "title": "Mariages & Événements",
+      "desc": "Des arrivées élégantes pour toute la famille — mariages, bals, anniversaires et événements d'entreprise avec un timing coordonné et un chauffeur dédié qui comprend l'importance du jour."
+    }
+  },
+  "stats": {
+    "driving": "Ans de conduite professionnelle",
+    "surge": "Tarification dynamique — jamais",
+    "languages": "Service en anglais et en français",
+    "availability": "Sur réservation"
+  },
+  "fleet": {
+    "badge": "Notre flotte",
+    "title": "Des véhicules de luxe impeccables",
+    "sub": "Cadillac Escalade, Chevrolet Suburban, Mercedes GLE et Mercedes C300 — entièrement assurés, parfaitement entretenus, conduits par des professionnels.",
+    "passengers": "passagers",
+    "luggage": "bagages",
+    "viewAll": "Voir toute la flotte"
+  },
+  "howItWorks": {
+    "badge": "Comment ça marche",
+    "title": "Trois étapes, en toute sérénité",
+    "step1Title": "Réservez",
+    "step1Desc": "Réservez en ligne ou par téléphone en moins de deux minutes — départ, destination, date et heure. Votre prix fixe est garanti dès la réservation.",
+    "step2Title": "Nous confirmons",
+    "step2Desc": "Confirmation écrite dans les 30 minutes avec votre prix. Nous suivons votre vol et ajustons la prise en charge automatiquement.",
+    "step3Title": "Votre chauffeur arrive",
+    "step3Desc": "À l'heure, professionnel, à votre porte — bagages pris en charge. Détendez-vous ; le prix ne change jamais en route."
+  },
+  "serviceArea": {
+    "badge": "Zone desservie",
+    "title": "Le corridor Old Colony, au sud et à l'ouest de Boston",
+    "sub": "Prix fixes publiés vers Logan depuis Canton, Dedham, Westwood, Norwood, Milton, Sharon, Stoughton, Walpole, Needham et Quincy. Au-delà du corridor — hôtels de Boston, MHT, PVD, Nouvelle-Angleterre — sur devis par téléphone."
+  },
+  "testimonials": {
+    "badge": "Avis",
+    "title": "Une confiance, trajet après trajet"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Bon à savoir",
+    "items": [
+      { "q": "Comment réserver un trajet ?", "a": "Remplissez le formulaire de réservation ci-dessus ou appelez-nous au (781) 234-5451. Nous recommandons de réserver 24 heures à l'avance pour les trajets aéroport ; les réservations le jour même et tôt le matin sont possibles selon la disponibilité des véhicules." },
+      { "q": "Combien coûte un trajet vers l'aéroport Logan ?", "a": "Chaque ville du corridor a un prix fixe publié vers Logan — de 79 $ en berline (Milton, Quincy) à 105 $ (Walpole, Sharon), SUV +25 $. Péages inclus, pourboire à votre discrétion, et le prix ne change jamais avec le trafic, la demande ou la météo." },
+      { "q": "Suivez-vous les vols pour les transferts aéroport ?", "a": "Oui. Nous surveillons votre vol en temps réel et ajustons la prise en charge sans frais s'il est retardé ou en avance — avec jusqu'à 60 minutes d'attente gratuite à l'arrivée. Prise en charge au trottoir à chaque terminal — A, B, C et E." },
+      { "q": "Quelles zones couvrez-vous ?", "a": "Nous publions des prix fixes pour dix villes au sud et à l'ouest de Boston — Canton, Dedham, Westwood, Norwood, Milton, Sharon, Stoughton, Walpole, Needham et Quincy. Nous organisons aussi volontiers des trajets dans tout le Grand Boston et la Nouvelle-Angleterre sur demande." },
+      { "q": "Puis-je annuler ou modifier ma réservation ?", "a": "L'annulation est gratuite jusqu'à 24 heures avant la prise en charge ; dans les 24 heures, des frais de 50 % s'appliquent, et les absences sont facturées en totalité. Appelez-nous à tout moment pour modifier une réservation." }
+    ]
+  },
+  "blog": {
+    "badge": "Notre journal",
+    "title": "Conseils de voyage & guides locaux",
+    "readMore": "Lire l'article",
+    "viewAll": "Voir tous les articles"
+  },
+  "chat": {
+    "open": "Discutez avec nous",
+    "close": "Fermer le chat",
+    "title": "Assistant Old Colony",
+    "greeting": "Bonjour ! 👋 Comment pouvons-nous vous aider ?",
+    "back": "Retour au menu",
+    "moreQuestions": "Autres questions",
+    "call": "Appeler le (781) 234-5451",
+    "email": "Nous écrire",
+    "menu": {
+      "book": "Réserver un trajet",
+      "airport": "Transferts aéroport",
+      "pricing": "Tarifs",
+      "area": "Zone de service",
+      "faq": "FAQ",
+      "human": "Parler à un humain"
+    },
+    "airport": {
+      "answer": "Nous assurons des transferts à prix fixe vers Logan (BOS) à partir de 79 $ en berline — péages inclus, suivi de vol gratuit et prise en charge à chaque terminal, 24h/24. Si votre vol est retardé, nous ajustons la prise en charge sans frais. Manchester (MHT) et T.F. Green (PVD) sur devis.",
+      "book": "Réserver un transfert aéroport",
+      "learnMore": "En savoir plus"
+    },
+    "pricing": {
+      "answer": "Chaque ville du corridor a un prix fixe publié vers Logan — à partir de 79 $ en berline, péages inclus, jamais de majoration. Le tarif exact de votre ville figure sur sa page, ou demandez un trajet et nous confirmons votre prix en 30 minutes.",
+      "book": "Réserver un trajet"
+    },
+    "area": {
+      "answer": "Nous publions des prix fixes pour dix villes au sud et à l'ouest de Boston — Canton, Dedham, Westwood, Norwood, Milton, Sharon, Stoughton, Walpole, Needham et Quincy — ainsi que des trajets dans tout le Grand Boston et la Nouvelle-Angleterre sur demande. Votre ville n'y figure pas ? Appelez-nous."
+    },
+    "faq": {
+      "answer": "Bien sûr — choisissez une question :"
+    },
+    "human": {
+      "answer": "Bien sûr ! Appelez-nous ou écrivez-nous à tout moment — nous sommes disponibles 24h/24 et répondons généralement en quelques minutes."
+    }
+  },
+  "footer": {
+    "tagline": "Voiture privée vers l'aéroport de Boston Logan — prix fixes, véhicules de luxe et un chauffeur local ponctuel au service des villes au sud et à l'ouest de Boston. English & Français. 24h/24 sur réservation.",
+    "navigate": "Navigation",
+    "contact": "Contact",
+    "serviceArea": "Zone de service",
+    "address": "Canton, MA",
+    "licensed": "Entièrement agréé et assuré",
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
+  }
+}

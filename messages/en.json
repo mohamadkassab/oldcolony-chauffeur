@@ -1,0 +1,198 @@
+{
+  "nav": {
+    "services": "Services",
+    "fleet": "Fleet",
+    "blog": "Blog",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "bookRide": "Book a Ride",
+    "phone": "(781) 234-5451"
+  },
+  "hero": {
+    "badge": "Flat Rate to Logan · No Surge, Ever",
+    "headline1": "Private Car Service",
+    "headline2": "to Logan Airport.",
+    "sub": "A trusted local chauffeur south of Boston. Flat, all-in fares to Logan in Cadillac, Mercedes & Chevrolet luxury vehicles — punctual, discreet, 24/7 by reservation. English & Français.",
+    "cta": "Book a Ride",
+    "callUs": "Call Us",
+    "trust1": "Available 24 / 7",
+    "trust2": "No Surge Pricing — Ever",
+    "trust3": "Flight Tracking Included"
+  },
+  "booking": {
+    "title": "Book a Ride",
+    "serviceType": "Service Type",
+    "vehicleType": "Vehicle",
+    "pickup": "Pickup Address",
+    "dropoff": "Dropoff Address",
+    "passengers": "Passengers",
+    "datetime": "Date & Time",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "emailShort": "Email",
+    "notes": "Additional Info",
+    "submit": "Request Ride",
+    "submitting": "Sending...",
+    "success": "Request received! We'll confirm within 30 minutes.",
+    "error": "Something went wrong. Please call us directly.",
+    "pickupPlaceholder": "Enter pickup address",
+    "dropoffPlaceholder": "Enter destination",
+    "phonePlaceholder": "+1 (___) ___-____",
+    "step1Title": "Trip Details",
+    "step2Title": "Select Vehicle",
+    "step3Title": "Your Info",
+    "date": "Date",
+    "time": "Time",
+    "luggageCount": "Luggage",
+    "flightNumber": "Flight Number",
+    "flightNumberPlaceholder": "e.g. AA 1234",
+    "returnTrip": "Return Trip",
+    "returnDatetime": "Return Date & Time",
+    "next": "Continue",
+    "back": "Back",
+    "noVehicles": "No vehicles available for your group size",
+    "services": {
+      "airport": "Airport Transfer",
+      "city": "Point To Point",
+      "hourly": "Hourly Chauffeur",
+      "event": "Special Event"
+    },
+    "vehicles": {
+      "regular": "Regular",
+      "vip": "VIP"
+    }
+  },
+  "services": {
+    "badge": "Private Chauffeur Service · South of Boston",
+    "learnMore": "Learn more",
+    "title": "Chauffeured for Every Occasion",
+    "sub": "Flat-rate Logan Airport transfers, hourly chauffeur, corporate travel and weddings — serving the towns south and west of Boston. No surge pricing, ever.",
+    "airport": {
+      "title": "Car Service to Logan Airport",
+      "desc": "Flat-rate transfers to Boston Logan (BOS) from $79 — tolls included, free flight tracking, up to 60 minutes of free wait on arrivals, and curbside pickup at every terminal. Manchester (MHT) & T.F. Green (PVD) by quote."
+    },
+    "city": {
+      "title": "Point-to-Point Rides",
+      "desc": "Professional point-to-point service across the South Shore and into Boston — dinner downtown, appointments, commuter connections — always one flat rate agreed before the car arrives."
+    },
+    "hourly": {
+      "title": "Hourly Chauffeur",
+      "desc": "Your car and driver by the hour — errands, meetings across town, a night at the Symphony, or a full day of appointments on your schedule."
+    },
+    "event": {
+      "title": "Weddings & Events",
+      "desc": "Elegant arrivals for the whole party — weddings, proms, anniversaries and corporate events with coordinated timing and a dedicated chauffeur who understands the day."
+    }
+  },
+  "stats": {
+    "driving": "Years of professional driving",
+    "surge": "Surge pricing — ever",
+    "languages": "Service in English & French",
+    "availability": "By reservation"
+  },
+  "fleet": {
+    "badge": "Our Fleet",
+    "title": "Immaculate, Late-Model Luxury",
+    "sub": "Cadillac Escalade, Chevrolet Suburban, Mercedes GLE and Mercedes C300 — fully insured, immaculately maintained, driven by professionals.",
+    "passengers": "passengers",
+    "luggage": "bags",
+    "viewAll": "View Full Fleet"
+  },
+  "howItWorks": {
+    "badge": "How It Works",
+    "title": "Three Quiet Steps",
+    "step1Title": "Book",
+    "step1Desc": "Reserve online or by phone in under two minutes — pickup, drop-off, date and time. Your flat rate is locked the moment you book.",
+    "step2Title": "We Confirm Fast",
+    "step2Desc": "Written confirmation within 30 minutes with your price. We watch your flight and adjust your pickup automatically if it's early or delayed.",
+    "step3Title": "Your Chauffeur Arrives",
+    "step3Desc": "On time, professional, at your door — bags handled. Sit back; the price never changes en route."
+  },
+  "serviceArea": {
+    "badge": "Service Area",
+    "title": "The Old Colony Corridor, South & West of Boston",
+    "sub": "Published flat rates to Logan from Canton, Dedham, Westwood, Norwood, Milton, Sharon, Stoughton, Walpole, Needham and Quincy. Trips beyond the corridor — Boston hotels, MHT, PVD, New England — quoted by phone."
+  },
+  "testimonials": {
+    "badge": "Reviews",
+    "title": "Trusted, Ride After Ride"
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Good to Know",
+    "items": [
+      {
+        "q": "How do I book a ride?",
+        "a": "Fill out the booking form above or call us at (781) 234-5451. We recommend booking 24 hours ahead for airport runs; same-day and early-morning rides are available whenever a vehicle is free."
+      },
+      {
+        "q": "How much is car service to Logan Airport?",
+        "a": "Every corridor town has a published flat rate to Logan — from $79 by sedan (Milton, Quincy) to $105 (Walpole, Sharon), SUVs +$25. Tolls included, gratuity at your discretion, and the price never changes with traffic, demand or weather."
+      },
+      {
+        "q": "Do you track flights for Logan Airport pickups?",
+        "a": "Yes. We monitor your flight in real time and adjust your pickup at no extra charge if your flight is delayed or lands early — with up to 60 minutes of free wait on arrivals. We pick up curbside at every terminal — A, B, C and E."
+      },
+      {
+        "q": "What areas do you cover?",
+        "a": "We publish flat rates for ten towns south and west of Boston — Canton, Dedham, Westwood, Norwood, Milton, Sharon, Stoughton, Walpole, Needham and Quincy. We're also happy to arrange trips throughout Greater Boston and New England on request."
+      },
+      {
+        "q": "Can I cancel or modify my booking?",
+        "a": "Cancellations are free up to 24 hours before pickup; within 24 hours a 50% charge applies, and no-shows are billed in full. Call us anytime to modify a booking — we'll always try to accommodate."
+      }
+    ]
+  },
+  "blog": {
+    "badge": "From Our Journal",
+    "title": "Travel Tips & Local Guides",
+    "readMore": "Read Article",
+    "viewAll": "View All Posts"
+  },
+  "chat": {
+    "open": "Chat with us",
+    "close": "Close chat",
+    "title": "Old Colony Assistant",
+    "greeting": "Hi there! 👋 How can we help you today?",
+    "back": "Back to menu",
+    "moreQuestions": "More questions",
+    "call": "Call (781) 234-5451",
+    "email": "Email us",
+    "menu": {
+      "book": "Book a ride",
+      "airport": "Airport transfers",
+      "pricing": "Pricing",
+      "area": "Service area",
+      "faq": "FAQ",
+      "human": "Talk to a human"
+    },
+    "airport": {
+      "answer": "We run flat-rate transfers to Logan (BOS) from $79 by sedan — tolls included, free flight tracking and curbside pickup at every terminal, 24/7. If your flight is delayed, we adjust your pickup at no extra charge. Manchester (MHT) and T.F. Green (PVD) by quote.",
+      "book": "Book an airport ride",
+      "learnMore": "Learn more"
+    },
+    "pricing": {
+      "answer": "Every corridor town has a published flat rate to Logan — from $79 by sedan, tolls included, no surge ever. You'll find your town's exact rate on its page, or request a ride and we'll confirm your price within 30 minutes.",
+      "book": "Book a ride"
+    },
+    "area": {
+      "answer": "We publish flat rates for ten towns south and west of Boston — Canton, Dedham, Westwood, Norwood, Milton, Sharon, Stoughton, Walpole, Needham and Quincy — plus trips throughout Greater Boston and New England on request. Don't see your town? Just call us."
+    },
+    "faq": {
+      "answer": "Sure — pick a question:"
+    },
+    "human": {
+      "answer": "Of course! Call or email us anytime — we're available 24/7 and typically respond within minutes."
+    }
+  },
+  "footer": {
+    "tagline": "Private car service to Boston Logan Airport — flat rates, luxury vehicles and a punctual local chauffeur serving the towns south and west of Boston. English & Français. 24/7 by reservation.",
+    "navigate": "Navigate",
+    "contact": "Contact",
+    "serviceArea": "Service Area",
+    "address": "Canton, MA",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}
