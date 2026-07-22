@@ -154,3 +154,18 @@ Prep for the $500 Google Ads PMax credit. Audit found tracking scaffold was live
 4. (Optional) create a GA4 property → set `NEXT_PUBLIC_GA4_ID`.
 5. Tune `NEXT_PUBLIC_LEAD_VALUE` to real avg margin.
 6. Geo: target the service-area cities with **"Presence: people in/regularly in"** (not presence-or-interest); turn **Final URL expansion OFF** initially (land on homepage form).
+
+### Phase 10 — UX/conversion + SEO round (Old Colony, 2026-07-22) ✅
+Brainstorm session with Wael → approved package (Twilio SMS deferred):
+- **Instant flat-rate quote in BookingForm** — new `lib/quote.ts` detects corridor-town ↔ Logan trips from the typed addresses (conservative string match + "final price confirmed" copy). Step 1 shows a rate banner (sedan + SUV), step 2 vehicle cards show per-vehicle `$X flat` (replaces meaningless VIP badge when quoted), step 3 summary shows the locked rate. `quotedRate` flows into the API → Telegram, both emails, and is prepended to DB notes (`[Quoted flat rate: $X]`) for the admin dashboard. i18n en+fr.
+- **Email field (optional) on step 3** — guests finally get the Resend confirmation email (API already supported it; form never collected it).
+- **Success screen** — booking reference + "confirm within 30 min" + phone link (was a bare checkmark).
+- **Real reviews** — REVIEWS in `lib/data.ts` replaced with the 4 real Google reviews from the Birdeye profile (Kesia S., MarDeb B., Ali S., Temesgen M.). Removed `aggregateRating`/`review` JSON-LD from layout (Google treats third-party-collected review markup as self-serving spam). Testimonials section: 2-col grid + "real reviews from Google" sub.
+- **Homepage restructure** — order now Hero → FlatRates → HowItWorks → Services → Fleet → Testimonials → ServiceArea → FAQ. StatsSection deleted (trust markers already in hero), Blog section removed from homepage (still at /blog; navbar/footer now link to the page instead of a dead #blog anchor). Navbar gained a "Rates" link. Homepage no longer queries the DB.
+- **FAQPage JSON-LD** on the homepage, built from the same localized `faq.items` the section renders.
+- **WhatsApp** — `lib/contact.ts` (WHATSAPP_URL + canonical phone/email consts), `WhatsAppIcon` component; green button in StickyMobileBar + link in Footer contact.
+- **Corporate travel page** — new `corporate-travel` entry in SERVICE_PAGES (EN+FR, monthly-invoicing pitch, assistant-friendly copy); auto-appears in sitemap; footer "Corporate Travel" link.
+- **Services positioning polish** — airport page now quotes the published $79–105 corridor rates; black-car page corridor-anchored (dropped "30+ towns" claims).
+- **Photos** — hero was literally the *Manhattan* skyline (og-hero.jpg too): replaced with a Boston-skyline-at-dusk Pexels photo (hero.avif 2400×1350 + og-hero.jpg 1200×630). c300.avif had garbled AI text on the grille → replaced with a clean black S-Class (Pexels). Suburban/Escalade/GLE kept. Pexels license: free commercial use, no attribution required.
+- Deferred: Twilio SMS (Wael), 29 blog posts DB retarget (low ROI now), review-request automation (pointless until GBP exists — no review link to send).
+- Verified: `tsc --noEmit` clean, `next build` all routes OK.

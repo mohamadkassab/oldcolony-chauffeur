@@ -5,7 +5,6 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { auth } from '@/auth';
 import { routing } from '@/i18n/routing';
-import { REVIEWS } from '@/lib/data';
 import { GoogleAds } from '@/components/analytics/GoogleAds';
 import { ChatWidget } from '@/components/chat/ChatWidget';
 import '../globals.css';
@@ -134,19 +133,9 @@ const JSON_LD = {
       },
     ],
   },
-  // On-site testimonials — same data rendered in the Reviews section.
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: (REVIEWS.reduce((sum, r) => sum + r.stars, 0) / REVIEWS.length).toFixed(1),
-    reviewCount: REVIEWS.length,
-    bestRating: '5',
-  },
-  review: REVIEWS.map((r) => ({
-    '@type': 'Review',
-    author: { '@type': 'Person', name: r.name },
-    reviewRating: { '@type': 'Rating', ratingValue: String(r.stars), bestRating: '5' },
-    reviewBody: r.text,
-  })),
+  // NOTE: deliberately no aggregateRating/review markup. Our reviews are
+  // collected on Google, and Google ignores/penalizes "self-serving" review
+  // schema fed from third-party profiles. Ratings belong to the GBP listing.
 };
 
 export function generateStaticParams() {

@@ -31,6 +31,7 @@ function bookingRows(data: BookingFormData, includeContact: boolean): EmailRow[]
   rows.push({ label: 'Dropoff', value: data.dropoff });
   rows.push({ label: 'Passengers', value: String(data.passengers) });
   rows.push({ label: 'Date & time', value: `${formatDate(data.date)} at ${data.time}` });
+  if (data.quotedRate) rows.push({ label: 'Quoted flat rate', value: `$${data.quotedRate} (tolls included)` });
   if (data.flightNumber) rows.push({ label: 'Flight', value: data.flightNumber });
   if (data.notes) rows.push({ label: 'Notes', value: data.notes });
   return rows;

@@ -1,7 +1,10 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import { MapPin, Phone, Mail, ShieldCheck } from 'lucide-react';
+import { Link } from '@/i18n/navigation';
 import { BrandLogo } from './BrandLogo';
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
+import { WHATSAPP_URL } from '@/lib/contact';
 
 const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
@@ -33,7 +36,15 @@ export function Footer() {
                 </li>
               ))}
               <li><button onClick={() => scrollTo('fleet')} className="type-body-sm font-light text-white/40 hover:text-white transition-colors cursor-pointer">{tnav('fleet')}</button></li>
-              <li><button onClick={() => scrollTo('blog')}  className="type-body-sm font-light text-white/40 hover:text-white transition-colors cursor-pointer">{tnav('blog')}</button></li>
+              <li>
+                <Link
+                  href={{ pathname: '/services/[slug]', params: { slug: 'corporate-travel' } }}
+                  className="type-body-sm font-light text-white/40 hover:text-white transition-colors"
+                >
+                  {t('corporate')}
+                </Link>
+              </li>
+              <li><Link href="/blog" className="type-body-sm font-light text-white/40 hover:text-white transition-colors">{tnav('blog')}</Link></li>
             </ul>
           </div>
 
@@ -52,6 +63,10 @@ export function Footer() {
               <li className="flex gap-3 type-body-sm font-light text-white/40">
                 <Mail size={15} className="text-brand-magenta mt-0.5 flex-shrink-0" />
                 <a href="mailto:info@oldcolonychauffeur.com" className="hover:text-white transition-colors">info@oldcolonychauffeur.com</a>
+              </li>
+              <li className="flex gap-3 type-body-sm font-light text-white/40">
+                <WhatsAppIcon size={15} className="text-brand-magenta mt-0.5 flex-shrink-0" />
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">WhatsApp</a>
               </li>
             </ul>
           </div>

@@ -1,5 +1,6 @@
 {
   "nav": {
+    "rates": "Tarifs",
     "services": "Services",
     "fleet": "Flotte",
     "blog": "Blog",
@@ -34,6 +35,18 @@
     "submit": "Demander un trajet",
     "submitting": "Envoi en cours...",
     "success": "Demande reçue ! Nous confirmons dans les 30 minutes.",
+    "successTitle": "Demande reçue !",
+    "successRef": "Votre référence de réservation :",
+    "successNext": "Nous confirmons votre trajet et votre prix dans les 30 minutes. Si vous avez laissé un email, une confirmation écrite est en route.",
+    "successCall": "Plus rapide ? Appelez le (781) 234-5451",
+    "emailInvalid": "Email invalide",
+    "emailPlaceholder": "vous@exemple.com — pour votre confirmation écrite",
+    "quoteBanner": "Prix fixe {town} ↔ Logan :",
+    "quoteSedan": "berline",
+    "quoteSuv": "SUV",
+    "quoteFlat": "fixe",
+    "quoteYourRate": "Votre prix fixe — péages inclus",
+    "quoteNote": "Péages inclus · pourboire facultatif · prix final confirmé avec votre réservation",
     "error": "Une erreur s'est produite. Veuillez nous appeler directement.",
     "pickupPlaceholder": "Entrez l'adresse de départ",
     "dropoffPlaceholder": "Entrez la destination",
@@ -124,7 +137,8 @@
   },
   "testimonials": {
     "badge": "Avis",
-    "title": "Une confiance, trajet après trajet"
+    "title": "Une confiance, trajet après trajet",
+    "sub": "De vrais avis de nos clients sur Google — 5,0 étoiles, sans exception."
   },
   "faq": {
     "badge": "FAQ",
@@ -182,6 +196,7 @@
   "footer": {
     "tagline": "Voiture privée vers l'aéroport de Boston Logan — prix fixes, véhicules de luxe et un chauffeur local ponctuel au service des villes au sud et à l'ouest de Boston. English & Français. 24h/24 sur réservation.",
     "navigate": "Navigation",
+    "corporate": "Voyages d'affaires",
     "contact": "Contact",
     "serviceArea": "Zone de service",
     "address": "Canton, MA",

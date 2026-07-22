@@ -75,7 +75,10 @@ export async function POST(req: NextRequest) {
       returnTrip: body.returnTrip ?? false,
       returnDatetime: toDateOrNull(body.returnDatetime),
       scheduledAt,
-      notes: body.notes ?? null,
+      // Surface the quoted rate to the admin dashboard without a schema change.
+      notes: [body.quotedRate ? `[Quoted flat rate: $${body.quotedRate}]` : null, body.notes]
+        .filter(Boolean)
+        .join(' ') || null,
       name: body.name,
       phone: body.phone,
       email,
@@ -110,6 +113,7 @@ export async function POST(req: NextRequest) {
     `<b>Service:</b> ${serviceType} | <b>Vehicle:</b> ${formatVehicle(body.vehicleId, vehicleType)}`,
     `<b>Passengers:</b> ${body.passengers}`,
     `<b>Date:</b> ${date} at ${body.time}`,
+    body.quotedRate ? `<b>Quoted flat rate:</b> $${body.quotedRate}` : null,
     body.notes ? `<b>Notes:</b> ${body.notes}` : null,
   ]
     .filter(Boolean)

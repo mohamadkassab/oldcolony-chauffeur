@@ -3,6 +3,8 @@ import { Phone } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/Button';
 import { ButtonLink } from '@/components/ui/ButtonLink';
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
+import { WHATSAPP_URL } from '@/lib/contact';
 
 export function StickyMobileBar() {
   const t = useTranslations('nav');
@@ -21,6 +23,15 @@ export function StickyMobileBar() {
         <Phone size={15} />
         {t('phone')}
       </ButtonLink>
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="WhatsApp"
+        className="flex items-center justify-center rounded-lg border border-[#25D366]/40 bg-[#25D366]/10 px-3 text-[#1DA851] transition-colors hover:bg-[#25D366]/20"
+      >
+        <WhatsAppIcon size={18} />
+      </a>
       <Button
         size="sm"
         className="flex-1 whitespace-nowrap"

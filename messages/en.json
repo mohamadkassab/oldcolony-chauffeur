@@ -1,5 +1,6 @@
 {
   "nav": {
+    "rates": "Rates",
     "services": "Services",
     "fleet": "Fleet",
     "blog": "Blog",
@@ -34,6 +35,18 @@
     "submit": "Request Ride",
     "submitting": "Sending...",
     "success": "Request received! We'll confirm within 30 minutes.",
+    "successTitle": "Request received!",
+    "successRef": "Your booking reference:",
+    "successNext": "We'll confirm your ride and price within 30 minutes. If you left an email, a written confirmation is on its way.",
+    "successCall": "Need it faster? Call (781) 234-5451",
+    "emailInvalid": "Invalid email",
+    "emailPlaceholder": "you@example.com — for your written confirmation",
+    "quoteBanner": "{town} ↔ Logan flat rate:",
+    "quoteSedan": "sedan",
+    "quoteSuv": "SUV",
+    "quoteFlat": "flat",
+    "quoteYourRate": "Your flat rate — tolls included",
+    "quoteNote": "Tolls included · gratuity optional · final price confirmed with your booking",
     "error": "Something went wrong. Please call us directly.",
     "pickupPlaceholder": "Enter pickup address",
     "dropoffPlaceholder": "Enter destination",
@@ -124,7 +137,8 @@
   },
   "testimonials": {
     "badge": "Reviews",
-    "title": "Trusted, Ride After Ride"
+    "title": "Trusted, Ride After Ride",
+    "sub": "Real reviews from our riders on Google — 5.0 stars, every one of them."
   },
   "faq": {
     "badge": "FAQ",
@@ -197,6 +211,7 @@
   "footer": {
     "tagline": "Private car service to Boston Logan Airport — flat rates, luxury vehicles and a punctual local chauffeur serving the towns south and west of Boston. English & Français. 24/7 by reservation.",
     "navigate": "Navigate",
+    "corporate": "Corporate Travel",
     "contact": "Contact",
     "serviceArea": "Service Area",
     "address": "Canton, MA",

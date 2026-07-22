@@ -6,11 +6,12 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import ReCAPTCHA from 'react-google-recaptcha';
 import {
-  MapPin, Users, Phone, User, FileText, Plane, Clock, Star,
-  Loader2, ChevronRight, Package, RotateCcw, Check, ArrowLeft,
+  MapPin, Users, Phone, User, Mail, FileText, Plane, Clock, Star,
+  Loader2, ChevronRight, Package, RotateCcw, Check, ArrowLeft, BadgeCheck,
 } from 'lucide-react';
 import { ServiceType, VehicleType } from '@/types';
 import { FLEET } from '@/lib/data';
+import { getLoganQuote, vehicleClassOf } from '@/lib/quote';
 import { trackFormConversion } from '@/lib/gtag';
 import { Button } from '@/components/ui/Button';
 import { TextInput, Textarea, SelectInput, FieldLabel } from '@/components/ui/Field';
@@ -35,6 +36,7 @@ const schema = z.object({
   vehicleId:      z.string().min(1, 'Required'),
   name:           z.string().min(2, 'Required'),
   phone:          z.string().min(7, 'Required'),
+  email:          z.string().email('Invalid email').optional().or(z.literal('')),
   notes:          z.string().optional(),
 });
 
@@ -166,6 +168,7 @@ export function BookingForm({
 
   const [step, setStep]                     = useState<1 | 2 | 3>(1);
   const [submitted, setSubmitted]           = useState(false);
+  const [reference, setReference]           = useState<string | null>(null);
   const [submitError, setSubmitError]       = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const [savedAddresses, setSavedAddresses] = useState<SavedAddressOption[]>([]);
@@ -211,6 +214,12 @@ export function BookingForm({
 
   const availableVehicles = FLEET.filter(v => v.maxPassengers >= passengers);
 
+  // Live flat-rate quote for corridor-town ↔ Logan trips.
+  const quote          = getLoganQuote(pickup ?? '', dropoff ?? '');
+  const quotedRate     = quote ? (vehicleClassOf(vehicleId) === 'sedan' ? quote.sedanRate : quote.suvRate) : null;
+  const rateForVehicle = (id: string) =>
+    quote ? (vehicleClassOf(id) === 'sedan' ? quote.sedanRate : quote.suvRate) : null;
+
   const handleStep1Continue = async () => {
     const valid = await trigger(STEP1_FIELDS);
     if (valid) setStep(2);
@@ -240,7 +249,9 @@ export function BookingForm({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...data,
+          email: data.email || undefined,
           vehicleType: vType,
+          quotedRate: quotedRate ?? undefined,
           recaptchaToken,
         }),
       });
@@ -255,6 +266,7 @@ export function BookingForm({
         name: data.name,
         phone: data.phone,
       });
+      setReference(result?.reference ?? null);
       setSubmitted(true);
     } catch {
       setSubmitError(true);
@@ -269,7 +281,20 @@ export function BookingForm({
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <p className="text-brand-dark font-semibold text-base">{t('success')}</p>
+        <p className="text-brand-dark font-semibold text-base mb-1">{t('successTitle')}</p>
+        {reference && (
+          <p className="text-sm text-gray-600 mb-3">
+            {t('successRef')}{' '}
+            <span className="font-mono font-bold text-brand-magenta tracking-wide">{reference}</span>
+          </p>
+        )}
+        <p className="text-sm text-gray-500 mb-4">{t('successNext')}</p>
+        <a
+          href="tel:+17812345451"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-brand-magenta hover:underline"
+        >
+          <Phone size={14} /> {t('successCall')}
+        </a>
       </div>
     );
   }
@@ -414,6 +439,22 @@ export function BookingForm({
         </div>
       </div>
 
+      {/* Live flat-rate quote — corridor town ↔ Logan trips only */}
+      {quote && (
+        <div className="flex items-start gap-2.5 rounded-xl border border-brand-magenta/30 bg-brand-light px-3.5 py-3">
+          <BadgeCheck size={16} className="text-brand-magenta flex-shrink-0 mt-0.5" />
+          <p className="text-sm text-gray-700 leading-snug">
+            <span className="font-semibold text-brand-dark">
+              {t('quoteBanner', { town: quote.town.name })}
+            </span>{' '}
+            <span className="font-bold text-brand-magenta">${quote.sedanRate}</span> {t('quoteSedan')}
+            {' · '}
+            <span className="font-bold text-brand-magenta">${quote.suvRate}</span> {t('quoteSuv')}
+            <span className="block text-xs text-gray-500 mt-0.5">{t('quoteNote')}</span>
+          </p>
+        </div>
+      )}
+
       {/* Flight number (airport only) */}
       {serviceType === ServiceType.AIRPORT && (
         <div>
@@ -507,9 +548,15 @@ export function BookingForm({
                 <div className="p-2.5 bg-white flex flex-col gap-1">
                   <p className="text-xs font-semibold text-gray-800 leading-tight truncate">{vehicle.name}</p>
                   <div className="flex items-center justify-between">
-                    <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-amber-100 text-amber-700 tracking-wide">
-                      VIP
-                    </span>
+                    {rateForVehicle(vehicle.id) !== null ? (
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-brand-light text-brand-magenta tracking-wide">
+                        ${rateForVehicle(vehicle.id)} {t('quoteFlat')}
+                      </span>
+                    ) : (
+                      <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-amber-100 text-amber-700 tracking-wide">
+                        VIP
+                      </span>
+                    )}
                     <span className="flex items-center gap-1 text-[11px] text-gray-500">
                       <Users size={10} />{vehicle.maxPassengers}
                       <Package size={10} className="ml-1" />{vehicle.maxLuggage}
@@ -561,6 +608,14 @@ export function BookingForm({
                 </p>
               )}
             </div>
+            {quotedRate !== null && (
+              <div className="mt-2.5 pt-2.5 border-t border-brand-border flex items-center justify-between">
+                <span className="text-xs font-medium text-gray-600">{t('quoteYourRate')}</span>
+                <span className="text-base font-bold text-brand-magenta">
+                  ${quotedRate} <span className="text-[10px] font-semibold uppercase tracking-wide">{t('quoteFlat')}</span>
+                </span>
+              </div>
+            )}
           </div>
         )}
 
@@ -585,6 +640,18 @@ export function BookingForm({
               placeholder={t('phonePlaceholder')}
             />
           </div>
+        </div>
+
+        {/* Email — optional; guests who leave it get a written confirmation */}
+        <div>
+          <FieldLabel label={t('emailShort')} optional error={errors.email ? t('emailInvalid') : undefined} />
+          <TextInput
+            {...register('email')}
+            type="email"
+            icon={<Mail size={15} />}
+            error={!!errors.email}
+            placeholder={t('emailPlaceholder')}
+          />
         </div>
 
         {/* Notes */}

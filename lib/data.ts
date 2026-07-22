@@ -1,14 +1,14 @@
 import { Vehicle, VehicleType, BlogPost, Review } from '@/types';
 
-// Single source for on-site testimonials — rendered in TestimonialsSection and
-// serialized as Review/AggregateRating schema in the root layout's JSON-LD.
+// Real customer reviews, sourced verbatim (light punctuation cleanup only)
+// from the business's public Google profile via Birdeye. Do NOT invent
+// reviews here — and do NOT feed these into Review/AggregateRating JSON-LD:
+// Google treats third-party-collected review markup as self-serving spam.
 export const REVIEWS: Review[] = [
-  { name: 'Sarah M.',   location: 'Boston, MA',    stars: 5, text: 'Perfect airport pickup — driver was waiting when I landed, even though my flight was 20 minutes early. Immaculate car and super professional.' },
-  { name: 'James T.',   location: 'Cambridge, MA', stars: 5, text: 'Used them for my wedding. The whole experience was flawless. Showed up early, helped with the dress, kept everything on schedule.' },
-  { name: 'Priya K.',   location: 'Quincy, MA',    stars: 5, text: 'Best car service in Boston. Fixed prices mean no surprises — I use them every week for airport runs. Highly recommend.' },
-  { name: 'Marcus L.',  location: 'Dedham, MA',    stars: 5, text: 'Clean SUV, friendly driver, arrived exactly on time. Much better than any rideshare app for longer trips.' },
-  { name: 'Claire D.',  location: 'Providence, RI',stars: 5, text: 'Booked for a corporate event. Everything went smoothly. Will be using them for all our executive transportation.' },
-  { name: 'Ahmed Z.',   location: 'Canton, MA',    stars: 5, text: 'Called at 5am for an early flight and they were there, no complaints. Amazing service, very professional team.' },
+  { name: 'Kesia S.',    location: 'Google review', stars: 5, text: 'Our driver arrived promptly, was courteous and thoughtful, drove smoothly, and the car was clean.' },
+  { name: 'MarDeb B.',   location: 'Google review', stars: 5, text: 'Our go-to service. Used many times recently. Always punctual.' },
+  { name: 'Ali S.',      location: 'Google review', stars: 5, text: 'The best service ever! He took me and my family from Boston to New York. Awesome service and great deal!' },
+  { name: 'Temesgen M.', location: 'Google review', stars: 5, text: 'The best service — very kind people.' },
 ];
 
 export const FLEET: Vehicle[] = [

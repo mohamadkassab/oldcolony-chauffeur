@@ -56,4 +56,6 @@ export interface BookingFormData {
   phone: string;
   email?: string;
   notes?: string;
+  /** Published flat rate shown to the client in the form (corridor ↔ Logan). */
+  quotedRate?: number;
 }

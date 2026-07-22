@@ -10,9 +10,9 @@ export function TestimonialsSection() {
 
   return (
     <Section id="testimonials" tone="white">
-      <SectionHeader eyebrow={t('badge')} title={t('title')} />
+      <SectionHeader eyebrow={t('badge')} title={t('title')} sub={t('sub')} />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
         {REVIEWS.map(({ name, location, stars, text }) => (
           <Card key={name} padding="md" hover>
             <div className="flex gap-1 mb-4">

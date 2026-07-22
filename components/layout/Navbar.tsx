@@ -90,10 +90,12 @@ export function Navbar({ transparent = false }: NavbarProps) {
   };
 
   const NAV_LINKS: { label: string; action: () => void }[] = [
+    { label: t('rates'),    action: () => scrollTo('rates') },
     { label: t('services'), action: () => scrollTo('services') },
     { label: t('fleet'),    action: () => scrollTo('fleet') },
     { label: t('reviews'),  action: () => scrollTo('testimonials') },
-    { label: t('blog'),     action: () => scrollTo('blog') },
+    // The blog lives on its own page now (it's no longer a homepage section).
+    { label: t('blog'),     action: () => { setMenuOpen(false); router.push('/blog'); } },
   ];
 
   return (

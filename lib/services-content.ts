@@ -36,8 +36,8 @@ export const SERVICE_PAGES: ServicePage[] = [
             body: 'Give us your flight number when you book and we monitor it in real time. If your flight lands early, we are early; if it is delayed, the car adjusts — no waiting fees, no frantic phone calls from the terminal. Your chauffeur meets you curbside at your terminal door, helps with luggage, and gets you home or to your hotel in a spotless vehicle.',
           },
           {
-            heading: 'One fixed price, booked in advance',
-            body: 'Airport rides are quoted as a flat rate before you confirm — the price you see is the price you pay, at 5 AM or in Friday rush hour. We serve every terminal at Logan and cover the whole Greater Boston area, from Cambridge and Somerville to Quincy, Newton, Dedham, Canton and beyond.',
+            heading: 'One fixed price, published in advance',
+            body: 'Logan rides from our corridor towns run on published flat rates — from $79 by sedan (Milton, Quincy) to $105 (Walpole, Sharon), SUVs +$25, tolls included. The price you see is the price you pay, at 5 AM or in Friday rush hour. We serve every terminal at Logan from Canton, Dedham, Westwood, Norwood, Milton, Sharon, Stoughton, Walpole, Needham and Quincy — and quote trips beyond the corridor by phone.',
           },
         ],
         features: [
@@ -61,8 +61,8 @@ export const SERVICE_PAGES: ServicePage[] = [
             body: "Indiquez votre numéro de vol lors de la réservation et nous le suivons en temps réel. Vol en avance ? Nous sommes en avance. Vol retardé ? La voiture s'adapte — sans frais d'attente. Votre chauffeur vous accueille à la porte du terminal, s'occupe des bagages et vous conduit à destination dans un véhicule impeccable.",
           },
           {
-            heading: "Un prix fixe, réservé à l'avance",
-            body: "Chaque course aéroport est facturée à prix fixe, confirmé avant la réservation — le prix affiché est le prix payé, à 5h du matin comme en heure de pointe. Nous desservons tous les terminaux de Logan et tout le Grand Boston : Cambridge, Somerville, Quincy, Newton, Dedham, Canton et au-delà.",
+            heading: "Un prix fixe, publié à l'avance",
+            body: "Les trajets Logan depuis nos villes du corridor suivent des prix fixes publiés — de 79 $ en berline (Milton, Quincy) à 105 $ (Walpole, Sharon), SUV +25 $, péages inclus. Le prix affiché est le prix payé, à 5h du matin comme en heure de pointe. Nous desservons tous les terminaux de Logan depuis Canton, Dedham, Westwood, Norwood, Milton, Sharon, Stoughton, Walpole, Needham et Quincy — et les trajets hors corridor sont devisés par téléphone.",
           },
         ],
         features: [
@@ -93,14 +93,14 @@ export const SERVICE_PAGES: ServicePage[] = [
           },
           {
             heading: 'Corporate and personal',
-            body: 'We handle daily commutes, client pickups, medical appointments, dinners and nights out across the whole metro area — Boston, Cambridge, Brookline, Newton, Quincy and 30+ surrounding towns. Ride in a Mercedes sedan or a full-size SUV, always spotless inside and out.',
+            body: 'We handle daily commutes, client pickups, medical appointments, dinners and nights out — from our home corridor south and west of Boston (Canton, Dedham, Westwood, Norwood, Milton, Sharon, Stoughton, Walpole, Needham, Quincy) into Boston, Cambridge and anywhere in between. Ride in a Mercedes sedan or a full-size SUV, always spotless inside and out.',
           },
         ],
         features: [
           'Fixed, pre-agreed pricing',
           'Professional, background-checked chauffeurs',
           'Mercedes sedans & premium SUVs',
-          'Serving Boston + 30 surrounding towns',
+          'Based in the corridor south & west of Boston',
           'Corporate accounts welcome',
           'Book by phone or online in under a minute',
         ],
@@ -118,14 +118,14 @@ export const SERVICE_PAGES: ServicePage[] = [
           },
           {
             heading: 'Professionnel et personnel',
-            body: "Trajets quotidiens, accueil de clients, rendez-vous médicaux, dîners et sorties dans toute la métropole — Boston, Cambridge, Brookline, Newton, Quincy et plus de 30 villes voisines. Berline Mercedes ou grand SUV, toujours impeccables.",
+            body: "Trajets quotidiens, accueil de clients, rendez-vous médicaux, dîners et sorties — depuis notre corridor au sud et à l'ouest de Boston (Canton, Dedham, Westwood, Norwood, Milton, Sharon, Stoughton, Walpole, Needham, Quincy) vers Boston, Cambridge et partout entre les deux. Berline Mercedes ou grand SUV, toujours impeccables.",
           },
         ],
         features: [
           'Prix fixes convenus à l’avance',
           'Chauffeurs professionnels vérifiés',
           'Berlines Mercedes et SUV haut de gamme',
-          'Boston + 30 villes desservies',
+          "Basés dans le corridor au sud-ouest de Boston",
           'Comptes entreprises bienvenus',
           'Réservation en ligne ou par téléphone en une minute',
         ],
@@ -240,6 +240,62 @@ export const SERVICE_PAGES: ServicePage[] = [
           'Bals, remises de diplômes & anniversaires',
           'Réservations multi-véhicules pour les invités',
           "Prix fixe événementiel convenu à l'avance",
+        ],
+      },
+    },
+  },
+  {
+    slug: 'corporate-travel',
+    serviceType: ServiceType.CITY,
+    copy: {
+      en: {
+        metaTitle: 'Corporate Car Service South of Boston | Monthly Invoicing | Old Colony Chauffeur',
+        metaDescription: 'Corporate car service for companies south and west of Boston — executive airport transfers, client pickups, roadshows. Flat rates, monthly invoicing, one point of contact. Call (781) 234-5451.',
+        eyebrow: 'Corporate Travel',
+        title: 'A Car Service Your Company Can Put on Account',
+        intro: 'When the CFO lands at Logan or a client flies in for the day, the ride is part of the impression. Old Colony Chauffeur runs corporate transportation for businesses along the corridor south and west of Boston — flat rates agreed up front, professional chauffeurs, and monthly invoicing so nobody is chasing receipts.',
+        sections: [
+          {
+            heading: 'One account, every ride',
+            body: 'Set up a corporate account once and book by phone, email or online after that. Executive airport transfers on published flat rates, client and candidate pickups, multi-stop roadshow days by the hour — every ride lands on a single monthly invoice with references your finance team can reconcile in minutes.',
+          },
+          {
+            heading: 'Built for assistants and office managers',
+            body: 'Book on someone else\'s behalf in under a minute, get written confirmation with the price, and change plans by phone when the meeting runs long. We track inbound flights automatically, so a delayed arrival never needs a follow-up call.',
+          },
+        ],
+        features: [
+          'Monthly invoicing — no per-ride receipts',
+          'Published flat rates for Logan transfers',
+          'Book for colleagues and clients in one call',
+          'Free flight tracking on every airport pickup',
+          'Hourly hire for roadshows and executive visits',
+          'Discreet, professionally dressed chauffeurs',
+        ],
+      },
+      fr: {
+        metaTitle: "Service de voiture d'entreprise au sud de Boston | Facturation mensuelle | Old Colony Chauffeur",
+        metaDescription: "Service de voiture d'entreprise au sud et à l'ouest de Boston — transferts aéroport, accueil de clients, roadshows. Prix fixes, facturation mensuelle. Appelez le (781) 234-5451.",
+        eyebrow: "Voyages d'affaires",
+        title: 'Un service de voiture que votre entreprise met sur compte',
+        intro: "Quand un dirigeant atterrit à Logan ou qu'un client arrive pour la journée, le trajet fait partie de l'impression. Old Colony Chauffeur assure le transport d'entreprise le long du corridor au sud et à l'ouest de Boston — prix fixes convenus d'avance, chauffeurs professionnels et facturation mensuelle.",
+        sections: [
+          {
+            heading: 'Un compte, tous les trajets',
+            body: "Créez un compte entreprise une fois, puis réservez par téléphone, email ou en ligne. Transferts aéroport à prix fixes publiés, accueil de clients et de candidats, journées roadshow à l'heure — chaque course figure sur une facture mensuelle unique, avec références, que votre équipe finance rapproche en quelques minutes.",
+          },
+          {
+            heading: 'Pensé pour les assistant(e)s et office managers',
+            body: "Réservez pour quelqu'un d'autre en moins d'une minute, recevez une confirmation écrite avec le prix, et modifiez les plans par téléphone si la réunion se prolonge. Nous suivons les vols entrants automatiquement — un retard n'exige jamais d'appel de relance.",
+          },
+        ],
+        features: [
+          'Facturation mensuelle — sans reçus par course',
+          'Prix fixes publiés pour les transferts Logan',
+          'Réservez pour collègues et clients en un appel',
+          'Suivi de vol gratuit sur chaque prise en charge aéroport',
+          "Location à l'heure pour roadshows et visites de direction",
+          'Chauffeurs discrets et en tenue professionnelle',
         ],
       },
     },
