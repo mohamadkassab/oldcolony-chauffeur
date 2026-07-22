@@ -10,18 +10,15 @@
     "phone": "(781) 234-5451"
   },
   "hero": {
-    "badge": "Prix fixe vers Logan · Jamais de majoration",
-    "headline1": "Voiture privée",
-    "headline2": "vers l'aéroport Logan.",
-    "sub": "Votre chauffeur de confiance au sud de Boston. Prix fixes tout compris vers Logan en véhicules de luxe Cadillac, Mercedes et Chevrolet — ponctuel, discret, 24h/24 sur réservation. English & Français.",
+    "headline1": "Vers Logan,",
+    "headline2": "à l'heure. à chaque fois.",
+    "sub": "Votre chauffeur de confiance au sud de Boston. Prix fixes tout compris vers Logan en véhicules de luxe Cadillac, Mercedes et Chevrolet — ponctuel, discret, 24h/24 sur réservation.",
     "cta": "Réserver",
     "callUs": "Nous appeler",
     "trust1": "Disponible 24h/24",
     "trust2": "Jamais de tarifs dynamiques",
     "trust3": "Suivi de vol inclus",
     "formTitle": "Réservez votre trajet",
-    "formSub": "Prix confirmé par écrit sous 30 minutes",
-    "formBadge": "Jamais de majoration",
     "fare": {
       "title": "Votre prix fixe vers Logan",
       "town": "Votre ville",

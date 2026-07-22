@@ -10,18 +10,15 @@
     "phone": "(781) 234-5451"
   },
   "hero": {
-    "badge": "Flat Rate to Logan · No Surge, Ever",
-    "headline1": "Private Car Service",
-    "headline2": "to Logan Airport.",
-    "sub": "A trusted local chauffeur south of Boston. Flat, all-in fares to Logan in Cadillac, Mercedes & Chevrolet luxury vehicles — punctual, discreet, 24/7 by reservation. English & Français.",
+    "headline1": "To Logan,",
+    "headline2": "on time. every time.",
+    "sub": "A trusted local chauffeur south of Boston. Flat, all-in fares to Logan in Cadillac, Mercedes & Chevrolet luxury vehicles — punctual, discreet, 24/7 by reservation.",
     "cta": "Book a Ride",
     "callUs": "Call Us",
     "trust1": "Available 24 / 7",
     "trust2": "No Surge Pricing — Ever",
     "trust3": "Flight Tracking Included",
     "formTitle": "Book Your Ride",
-    "formSub": "Price confirmed in writing within 30 minutes",
-    "formBadge": "No surge — ever",
     "fare": {
       "title": "Check your flat rate to Logan",
       "town": "Your town",
