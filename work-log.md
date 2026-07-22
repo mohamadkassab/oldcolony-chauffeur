@@ -175,3 +175,7 @@ Brainstorm session with Wael → approved package (Twilio SMS deferred):
 - `BookingForm` listens for the event: sets serviceType=AIRPORT, pickup "<Town>, MA", dropoff "Boston Logan International Airport (BOS)" — `lib/quote.ts` then re-derives the same rate in the form, so finder + form can never disagree.
 - Hero right card got a navy header ("Book Your Ride" / "Price confirmed in writing within 30 minutes" / "No surge — ever" badge); phone CTA merged into the trust row to make room. i18n en+fr (`hero.fare.*`, `hero.form*`).
 - tsc + next build clean.
+
+### Phase 12 — Cursor polish + studio fleet images (2026-07-22) ✅
+- globals.css: base-layer rule making every enabled interactive element (a, button, select, summary, [role=button]) cursor:pointer — fixes footer Navigate buttons and everything else Tailwind preflight reset.
+- Fleet images rebuilt as a matching studio set: cars extracted with @imgly/background-removal-node (run in a separate process — it segfaults if loaded alongside sharp), composited onto a shared light-grey gradient backdrop with a soft elliptical shadow (1200×675 AVIF). All four (Suburban, Escalade, GLE, S-Class sedan) now share identical background/framing. Package uninstalled after the one-off run.
