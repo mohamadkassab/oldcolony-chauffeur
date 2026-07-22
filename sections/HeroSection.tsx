@@ -1,6 +1,7 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import { BookingForm } from '@/components/ui/BookingForm';
+import { FareFinder } from '@/components/ui/FareFinder';
 
 export function HeroSection() {
   const t = useTranslations('hero');
@@ -34,15 +35,21 @@ export function HeroSection() {
               {t('headline1')}<br />
               <span className="text-brand-pink italic">{t('headline2')}</span>
             </h1>
-            <p className="type-body text-white/70 max-w-lg mb-8">{t('sub')}</p>
-            <a
-              href="tel:+17812345451"
-              className="inline-flex items-center gap-3 text-white font-bold text-xl mb-8 hover:text-brand-pink transition-colors"
-            >
-              <span className="w-11 h-11 rounded-full border border-brand-pink/60 flex items-center justify-center text-brand-pink">☎</span>
-              (781) 234-5451
-            </a>
-            <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <p className="type-body text-white/70 max-w-lg mb-7">{t('sub')}</p>
+
+            {/* Interactive fare finder — the flat-rate promise, demonstrated */}
+            <div className="mb-7">
+              <FareFinder />
+            </div>
+
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+              <a
+                href="tel:+17812345451"
+                className="inline-flex items-center gap-2.5 text-white font-bold text-lg hover:text-brand-pink transition-colors"
+              >
+                <span className="w-9 h-9 rounded-full border border-brand-pink/60 flex items-center justify-center text-brand-pink text-sm">☎</span>
+                (781) 234-5451
+              </a>
               {(['trust1', 'trust2', 'trust3'] as const).map((k) => (
                 <span key={k} className="flex items-center gap-2 type-body-sm text-white/60">
                   <span className="w-1 h-1 bg-brand-pink rotate-45" />
@@ -53,8 +60,20 @@ export function HeroSection() {
           </div>
 
           {/* Right — booking form */}
-          <div id="booking" className="relative z-[55] bg-white rounded-2xl p-6 md:p-8">
-            <BookingForm />
+          <div id="booking" className="relative z-[55] bg-white rounded-2xl overflow-hidden">
+            <div className="bg-brand-ink px-6 md:px-8 py-4 flex items-center justify-between">
+              <div>
+                <p className="font-serif text-lg font-semibold text-white leading-tight">{t('formTitle')}</p>
+                <p className="type-caption text-white/50">{t('formSub')}</p>
+              </div>
+              <span className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-brand-pink/40 px-3 py-1 type-caption font-semibold text-brand-pink whitespace-nowrap">
+                <span className="w-1 h-1 bg-brand-pink rotate-45" />
+                {t('formBadge')}
+              </span>
+            </div>
+            <div className="p-6 md:p-8">
+              <BookingForm />
+            </div>
           </div>
 
         </div>

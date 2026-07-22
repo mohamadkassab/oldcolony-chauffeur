@@ -169,3 +169,9 @@ Brainstorm session with Wael → approved package (Twilio SMS deferred):
 - **Photos** — hero was literally the *Manhattan* skyline (og-hero.jpg too): replaced with a Boston-skyline-at-dusk Pexels photo (hero.avif 2400×1350 + og-hero.jpg 1200×630). c300.avif had garbled AI text on the grille → replaced with a clean black S-Class (Pexels). Suburban/Escalade/GLE kept. Pexels license: free commercial use, no attribution required.
 - Deferred: Twilio SMS (Wael), 29 blog posts DB retarget (low ROI now), review-request automation (pointless until GBP exists — no review link to send).
 - Verified: `tsc --noEmit` clean, `next build` all routes OK.
+
+### Phase 11 — Hero fare finder (2026-07-22) ✅
+- New `components/ui/FareFinder.tsx` in the hero: town select (10 corridor towns) + sedan/SUV toggle → published rate shown instantly (animated via `oc-pop` keyframe in globals.css). "Book this rate" dispatches `oc:prefill` CustomEvent + scrolls to #booking.
+- `BookingForm` listens for the event: sets serviceType=AIRPORT, pickup "<Town>, MA", dropoff "Boston Logan International Airport (BOS)" — `lib/quote.ts` then re-derives the same rate in the form, so finder + form can never disagree.
+- Hero right card got a navy header ("Book Your Ride" / "Price confirmed in writing within 30 minutes" / "No surge — ever" badge); phone CTA merged into the trust row to make room. i18n en+fr (`hero.fare.*`, `hero.form*`).
+- tsc + next build clean.

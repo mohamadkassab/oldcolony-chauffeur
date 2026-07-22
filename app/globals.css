@@ -173,3 +173,9 @@ body {
     letter-spacing: -0.01em;
   }
 }
+
+/* Fare-finder price pop — re-triggered by remounting the price node (key=). */
+@keyframes oc-pop {
+  0%   { opacity: 0; transform: translateY(6px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}

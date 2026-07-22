@@ -18,7 +18,20 @@
     "callUs": "Nous appeler",
     "trust1": "Disponible 24h/24",
     "trust2": "Jamais de tarifs dynamiques",
-    "trust3": "Suivi de vol inclus"
+    "trust3": "Suivi de vol inclus",
+    "formTitle": "Réservez votre trajet",
+    "formSub": "Prix confirmé par écrit sous 30 minutes",
+    "formBadge": "Jamais de majoration",
+    "fare": {
+      "title": "Votre prix fixe vers Logan",
+      "town": "Votre ville",
+      "sedan": "Berline",
+      "suv": "SUV",
+      "flat": "fixe",
+      "toLogan": "vers Logan",
+      "note": "Péages inclus · pourboire facultatif",
+      "cta": "Réserver ce prix"
+    }
   },
   "booking": {
     "title": "Réserver un trajet",

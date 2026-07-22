@@ -18,7 +18,20 @@
     "callUs": "Call Us",
     "trust1": "Available 24 / 7",
     "trust2": "No Surge Pricing — Ever",
-    "trust3": "Flight Tracking Included"
+    "trust3": "Flight Tracking Included",
+    "formTitle": "Book Your Ride",
+    "formSub": "Price confirmed in writing within 30 minutes",
+    "formBadge": "No surge — ever",
+    "fare": {
+      "title": "Check your flat rate to Logan",
+      "town": "Your town",
+      "sedan": "Sedan",
+      "suv": "SUV",
+      "flat": "flat",
+      "toLogan": "to Logan",
+      "note": "Tolls included · gratuity optional",
+      "cta": "Book this rate"
+    }
   },
   "booking": {
     "title": "Book a Ride",

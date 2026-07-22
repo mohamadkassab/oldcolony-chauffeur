@@ -12,6 +12,7 @@ import {
 import { ServiceType, VehicleType } from '@/types';
 import { FLEET } from '@/lib/data';
 import { getLoganQuote, vehicleClassOf } from '@/lib/quote';
+import { PREFILL_EVENT, type PrefillDetail } from '@/components/ui/FareFinder';
 import { trackFormConversion } from '@/lib/gtag';
 import { Button } from '@/components/ui/Button';
 import { TextInput, Textarea, SelectInput, FieldLabel } from '@/components/ui/Field';
@@ -198,6 +199,20 @@ export function BookingForm({
       vehicleId:    '',
     },
   });
+
+  // Hero fare finder → pre-fill the trip (airport run at the published rate).
+  useEffect(() => {
+    const onPrefill = (e: Event) => {
+      const d = (e as CustomEvent<PrefillDetail>).detail;
+      if (!d?.pickup || !d?.dropoff) return;
+      setValue('serviceType', ServiceType.AIRPORT);
+      setValue('pickup', d.pickup, { shouldValidate: true });
+      setValue('dropoff', d.dropoff, { shouldValidate: true });
+      setStep(1);
+    };
+    window.addEventListener(PREFILL_EVENT, onPrefill);
+    return () => window.removeEventListener(PREFILL_EVENT, onPrefill);
+  }, [setValue]);
 
   const serviceType  = watch('serviceType');
   const passengers   = watch('passengers');
