@@ -84,6 +84,15 @@
       "desc": "Des arrivées élégantes pour toute la famille — mariages, bals, anniversaires et événements d'entreprise avec un timing coordonné et un chauffeur dédié qui comprend l'importance du jour."
     }
   },
+  "rates": {
+    "badge": "Prix fixes",
+    "title": "Un seul prix. Confirmé par écrit. Jamais de majoration.",
+    "sub": "Chaque ville du corridor a un prix fixe publié vers Logan. Le prix annoncé est le prix payé — péages inclus.",
+    "cta": "Réserver à votre prix fixe",
+    "seeAll": "Voir le tarif de votre ville",
+    "note": "Tarifs berline affichés · SUV +25 $ · péages inclus · pourboire à votre discrétion",
+    "toLogan": "→ Logan"
+  },
   "stats": {
     "driving": "Ans de conduite professionnelle",
     "surge": "Tarification dynamique — jamais",

@@ -2,12 +2,15 @@ import { Navbar }               from '@/components/layout/Navbar';
 import { Footer }               from '@/components/layout/Footer';
 import { StickyMobileBar }      from '@/components/layout/StickyMobileBar';
 import { HeroSection }          from '@/sections/HeroSection';
+import { StatsSection }         from '@/sections/StatsSection';
 import { ServicesSection }      from '@/sections/ServicesSection';
 import { FleetSection }         from '@/sections/FleetSection';
 import { BlogSection }          from '@/sections/BlogSection';
 import { HowItWorksSection }    from '@/sections/HowItWorksSection';
+import { FlatRatesSection }     from '@/sections/FlatRatesSection';
 import { ServiceAreaSection }   from '@/sections/ServiceAreaSection';
 import { TestimonialsSection }  from '@/sections/TestimonialsSection';
+import { FAQSection }           from '@/sections/FAQSection';
 import { listBlogPosts }        from '@/lib/repositories/blog';
 import type { BlogPost }        from '@/types';
 
@@ -36,13 +39,17 @@ export default async function HomePage() {
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar transparent />
       <main className="flex-grow">
+        {/* Section order mirrors the approved design (design brief §homepage). */}
         <HeroSection />
+        <StatsSection />
         <ServicesSection />
         <FleetSection />
-        <BlogSection posts={posts} limit={3} showViewAll />
         <HowItWorksSection />
-        <ServiceAreaSection />
+        <FlatRatesSection />
         <TestimonialsSection />
+        <ServiceAreaSection />
+        <FAQSection />
+        <BlogSection posts={posts} limit={3} showViewAll />
       </main>
       <Footer />
       {/* Clears the always-visible mobile bar so it never covers footer content. */}

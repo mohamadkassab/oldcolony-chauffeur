@@ -84,6 +84,15 @@
       "desc": "Elegant arrivals for the whole party — weddings, proms, anniversaries and corporate events with coordinated timing and a dedicated chauffeur who understands the day."
     }
   },
+  "rates": {
+    "badge": "Flat rates",
+    "title": "One price. Confirmed in writing. No surge.",
+    "sub": "Every corridor town has a published flat fare to Logan. What you're quoted is what you pay — tolls included.",
+    "cta": "Book at your flat rate",
+    "seeAll": "See your town's rate",
+    "note": "Sedan pricing shown · SUV +$25 · tolls included · gratuity at your discretion",
+    "toLogan": "→ Logan"
+  },
   "stats": {
     "driving": "Years of professional driving",
     "surge": "Surge pricing — ever",
